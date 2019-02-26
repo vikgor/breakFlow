@@ -67,7 +67,7 @@
                             <constraint firstItem="NGJ-00-sWV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yGT-4k-cEm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="breakFlow" id="4tb-dq-rpV"/>
+                    <tabBarItem key="tabBarItem" title="breakFlow" image="random" id="4tb-dq-rpV"/>
                     <connections>
                         <outlet property="randomNumberLabel" destination="AEB-hA-gu5" id="jKG-oM-kcr"/>
                         <outlet property="randomizeButton" destination="pQs-HO-usf" id="gdb-41-DMS"/>
@@ -115,11 +115,11 @@
             </objects>
             <point key="canvasLocation" x="2695" y="514"/>
         </scene>
-        <!--Settings-->
+        <!--moves-->
         <scene sceneID="G5h-U5-ruZ">
             <objects>
                 <navigationController id="Zfn-j8-1Pp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="aCK-gU-tTG"/>
+                    <tabBarItem key="tabBarItem" title="moves" image="pencil" id="aCK-gU-tTG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bii-M5-XFL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -140,6 +140,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Lop-tl-jZo"/>
@@ -152,6 +153,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" width="40" height="40"/>
+        <image name="random" width="40" height="40"/>
         <image name="stardust" width="798" height="798"/>
     </resources>
 </document>

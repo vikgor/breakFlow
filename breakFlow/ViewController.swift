@@ -13,14 +13,11 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
+    //Audio Player in da House - to play random scracth sounds
+    var audioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var randomNumberLabel: UILabel!
     @IBOutlet weak var randomizeButton: UIButton!
-    
-    //get variable from TableViewController
-    //var example:TableViewController = TableViewController()
-    //let data = defaults?.value(forKey: "savedData")
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +55,23 @@ class ViewController: UIViewController {
         }
         let string = breakFlow.joined(separator: "\n")
         randomNumberLabel.text = (string)
+        
+        
+        //play a random scratch sound on button press
+        let scracthSounds = ["90sp14", "90sp18","90sp50"]
+        let randomScratchIndex = Int(arc4random_uniform(UInt32(scracthSounds.count)))
+        let randomScratch = scracthSounds[randomScratchIndex]
+        let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: randomScratch, ofType: "wav")!)
+        print(alertSound)
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        try! AVAudioSession.sharedInstance().setActive(true)
+        try! audioPlayer = AVAudioPlayer(contentsOf: alertSound)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        
+        
     }
+    
 
 }
 
