@@ -20,7 +20,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //custom background image for the tableView
+        //custom background image for the tableView and dark top bar
         tableView.backgroundView = UIImageView(image: UIImage(named: "stardust.png"))
         navigationController?.navigationBar.barStyle = .black
         
