@@ -20,6 +20,10 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //custom background image for the tableView
+        tableView.backgroundView = UIImageView(image: UIImage(named: "stardust.png"))
+        navigationController?.navigationBar.barStyle = .black
+        
         getData()
         print("Вот набор движений на viewDidLoad:")
         print(tableMoves)
@@ -57,6 +61,10 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moves", for: indexPath)
         cell.textLabel?.text = tableMoves[indexPath.row]
+        //custom style for the cells in tableView
+        cell.backgroundColor = UIColor(white: 1, alpha: 0)
+        cell.textLabel?.textColor = UIColor.white
+        tableView.separatorColor = UIColor(red: 0.68, green: 0.67, blue: 0.73, alpha: 0)
         return cell
     }
 
