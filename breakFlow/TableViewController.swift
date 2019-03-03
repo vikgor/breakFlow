@@ -24,7 +24,6 @@ class TableViewController: UITableViewController {
         tableView.backgroundView = UIImageView(image: UIImage(named: "stardust.png"))
         navigationController?.navigationBar.barStyle = .black
         
-        getData()
         print("Вот набор движений на viewDidLoad:")
         print(tableMoves)
         
@@ -37,7 +36,6 @@ class TableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        getData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

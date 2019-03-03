@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stardust" translatesAutoresizingMaskIntoConstraints="NO" id="NGJ-00-sWV">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажми на кнопку чтобы получить новую связь" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEB-hA-gu5">
                                 <rect key="frame" x="16" y="40" width="343" height="489"/>
@@ -34,7 +34,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQs-HO-usf">
                                 <rect key="frame" x="90" y="537" width="195" height="73"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="73" id="lb0-g1-tJN"/>
+                                    <constraint firstAttribute="height" constant="73" id="Ct7-wh-0ib"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <state key="normal" title="Кнопка">
@@ -47,17 +47,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="NGJ-00-sWV" secondAttribute="trailing" id="1Mh-Fw-FEO"/>
-                            <constraint firstItem="pQs-HO-usf" firstAttribute="top" secondItem="AEB-hA-gu5" secondAttribute="bottom" constant="8" symbolic="YES" id="2zf-y6-kJp"/>
-                            <constraint firstItem="NGJ-00-sWV" firstAttribute="centerX" secondItem="AEB-hA-gu5" secondAttribute="centerX" id="EcH-qC-0JU"/>
-                            <constraint firstItem="AEB-hA-gu5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Gtv-gz-DLR"/>
-                            <constraint firstItem="NGJ-00-sWV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ajN-VU-0bx"/>
-                            <constraint firstItem="AEB-hA-gu5" firstAttribute="centerX" secondItem="pQs-HO-usf" secondAttribute="centerX" id="brH-XE-ZmR"/>
-                            <constraint firstItem="AEB-hA-gu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ceP-6r-1l0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pQs-HO-usf" secondAttribute="bottom" constant="8" symbolic="YES" id="jXj-ut-V2A"/>
-                            <constraint firstItem="NGJ-00-sWV" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="tns-UF-dFp"/>
-                            <constraint firstItem="pQs-HO-usf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="wil-S2-rC5"/>
-                            <constraint firstItem="NGJ-00-sWV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yGT-4k-cEm"/>
+                            <constraint firstItem="AEB-hA-gu5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="88l-Wf-oKJ"/>
+                            <constraint firstItem="NGJ-00-sWV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HYB-H3-hMx"/>
+                            <constraint firstItem="AEB-hA-gu5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JwC-Pk-8we"/>
+                            <constraint firstItem="pQs-HO-usf" firstAttribute="top" secondItem="AEB-hA-gu5" secondAttribute="bottom" constant="8" symbolic="YES" id="Z0E-fj-eaa"/>
+                            <constraint firstItem="AEB-hA-gu5" firstAttribute="centerX" secondItem="pQs-HO-usf" secondAttribute="centerX" id="b1L-Yi-96c"/>
+                            <constraint firstItem="NGJ-00-sWV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d87-Nh-6ba"/>
+                            <constraint firstAttribute="bottom" secondItem="NGJ-00-sWV" secondAttribute="bottom" id="jKC-MF-apV"/>
+                            <constraint firstItem="NGJ-00-sWV" firstAttribute="centerX" secondItem="pQs-HO-usf" secondAttribute="centerX" id="k2B-06-bAF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pQs-HO-usf" secondAttribute="bottom" constant="8" symbolic="YES" id="olq-ge-2Af"/>
+                            <constraint firstAttribute="trailing" secondItem="NGJ-00-sWV" secondAttribute="trailing" id="tdQ-SX-0LF"/>
+                            <constraint firstItem="pQs-HO-usf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="zmk-UZ-R90"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="breakFlow" image="random" id="4tb-dq-rpV"/>
@@ -68,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="-229"/>
+            <point key="canvasLocation" x="1744.8" y="-229.83508245877064"/>
         </scene>
         <!--Settings-->
         <scene sceneID="W9m-5M-N8b">
@@ -106,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPx-YG-ZqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2695" y="514"/>
+            <point key="canvasLocation" x="2521" y="441"/>
         </scene>
         <!--moves-->
         <scene sceneID="G5h-U5-ruZ">
@@ -123,7 +123,68 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLF-79-Dak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="514"/>
+            <point key="canvasLocation" x="1745" y="442"/>
+        </scene>
+        <!--30 sec-->
+        <scene sceneID="8ov-S7-jl2">
+            <objects>
+                <viewController id="Fep-uP-1fV" customClass="ViewController30sec" customModule="breakFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cj8-Xg-9sR"/>
+                        <viewControllerLayoutGuide type="bottom" id="MA2-St-Qwq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ggD-KZ-H96">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stardust" translatesAutoresizingMaskIntoConstraints="NO" id="Zwj-SE-rq8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIK-r7-emt">
+                                <rect key="frame" x="79" y="537" width="217" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="VCP-SZ-f7k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <state key="normal" title="Кнопка таймера">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTimerButtonTapped:" destination="Fep-uP-1fV" eventType="touchUpInside" id="RYK-Id-rfz"/>
+                                    <action selector="randomizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jvd-mI-kFV"/>
+                                    <action selector="startTimerButtonTapped:" destination="Fep-uP-1fV" eventType="touchUpInside" id="zeB-3y-Lfu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x85-k8-BOf">
+                                <rect key="frame" x="47" y="40" width="281" height="489"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qIK-r7-emt" firstAttribute="top" secondItem="x85-k8-BOf" secondAttribute="bottom" constant="8" symbolic="YES" id="0GE-GY-yrk"/>
+                            <constraint firstAttribute="trailing" secondItem="Zwj-SE-rq8" secondAttribute="trailing" id="GTr-2Z-TPx"/>
+                            <constraint firstItem="Zwj-SE-rq8" firstAttribute="leading" secondItem="ggD-KZ-H96" secondAttribute="leading" id="NGw-jo-ZJW"/>
+                            <constraint firstItem="x85-k8-BOf" firstAttribute="leading" secondItem="ggD-KZ-H96" secondAttribute="leadingMargin" constant="31" id="QbL-es-0HE"/>
+                            <constraint firstAttribute="bottom" secondItem="Zwj-SE-rq8" secondAttribute="bottom" id="S94-0M-cIy"/>
+                            <constraint firstItem="MA2-St-Qwq" firstAttribute="top" secondItem="qIK-r7-emt" secondAttribute="bottom" constant="8" symbolic="YES" id="SeY-kT-4p3"/>
+                            <constraint firstItem="x85-k8-BOf" firstAttribute="centerX" secondItem="qIK-r7-emt" secondAttribute="centerX" id="d8N-IT-CaB"/>
+                            <constraint firstItem="x85-k8-BOf" firstAttribute="top" secondItem="Cj8-Xg-9sR" secondAttribute="bottom" constant="20" id="eka-hr-bdl"/>
+                            <constraint firstItem="Zwj-SE-rq8" firstAttribute="top" secondItem="ggD-KZ-H96" secondAttribute="top" id="kpp-Qi-sHm"/>
+                            <constraint firstItem="Zwj-SE-rq8" firstAttribute="centerX" secondItem="x85-k8-BOf" secondAttribute="centerX" id="nea-uP-qqI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="30 sec" image="stopwatch" id="yA0-jq-cJB"/>
+                    <connections>
+                        <outlet property="label" destination="x85-k8-BOf" id="8kv-gg-O6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qzy-b9-uQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.8" y="1118.5907046476761"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aOf-Yb-acc">
@@ -138,16 +199,18 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Lop-tl-jZo"/>
                         <segue destination="Zfn-j8-1Pp" kind="relationship" relationship="viewControllers" id="p8j-aB-Db8"/>
+                        <segue destination="Fep-uP-1fV" kind="relationship" relationship="viewControllers" id="M4P-hO-6wt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q86-zm-QEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="150"/>
+            <point key="canvasLocation" x="550" y="734"/>
         </scene>
     </scenes>
     <resources>
         <image name="pencil" width="40" height="40"/>
         <image name="random" width="40" height="40"/>
         <image name="stardust" width="798" height="798"/>
+        <image name="stopwatch" width="37.5" height="37.5"/>
     </resources>
 </document>
