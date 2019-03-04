@@ -38,9 +38,7 @@
                                     <constraint firstAttribute="height" constant="80" id="Eqz-zW-pNc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <state key="normal" title="кнопка">
-                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="кнопка"/>
                                 <connections>
                                     <action selector="randomizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEc-GV-bi1"/>
                                 </connections>
@@ -147,9 +145,7 @@
                                     <constraint firstAttribute="height" constant="80" id="qhP-Ds-Q9M"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <state key="normal" title="старт">
-                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="старт"/>
                                 <connections>
                                     <action selector="cancelTimerButtonTapped:" destination="Fep-uP-1fV" eventType="touchUpInside" id="YeS-3C-9Nk"/>
                                     <action selector="randomizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jvd-mI-kFV"/>
@@ -194,6 +190,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="acd-Og-HMT">
                         <barButtonItem key="rightBarButtonItem" title="Правила" id="2DP-8E-NQu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="bJK-s5-cOm" kind="show" id="Cms-9S-Met"/>
                             </connections>

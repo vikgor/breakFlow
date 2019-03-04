@@ -14,7 +14,6 @@ class TableViewController: UITableViewController {
 
     @IBOutlet weak var addRowButton: UIBarButtonItem!
     
-    //var tableMoves = ["item1", "item2", "item3", "item4"]
     var tableMoves = ["ТопРок","Индиан Степ","Сальса Степ","Флор рок (мини промокашка)","Циркуль","3 степ","4 степ","Бейби лав","6 степ на локтях","6 степ олдскул","Скрэмбл","Мини-свайп","Мини-свайп через К","Зулу спин","Зулу спин через К","Зулу спин нога на коленке","Питер Пэн","Кувырок","Ножницы","Голень слайд","СС","СС на спине","СС обратный","СС с проворотом","СС с киком","Кик двумя ногами","Шафл степ","Рашн степс","Свайп нога на коленке","Вэб","Гелик","Свайп","Свайп на двух ногах","Бочка","Тартл","Джекхаммер","Бэкспин","Флаер","99","Хедспин","Бейби фриз","Бейби фриз","Чеир","Эир бейби","Бэк/полубэк","Фриз на плече","Фриз на локте","Фриз на руках","Фриз на руке","Фриз на голове"]
     
     override func viewDidLoad() {
@@ -41,9 +40,6 @@ class TableViewController: UITableViewController {
         super.viewDidDisappear(true)
         storeData()
     }
-    
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -74,7 +70,7 @@ class TableViewController: UITableViewController {
     */
 
     
-    // Override to support editing the table view.
+    //editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source

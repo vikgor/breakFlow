@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController30sec: UIViewController {
 
-    var counter = 30
+    var counter = 31
+    var counterOverall = 0
     var isPaused = true
     var timer = Timer()
 
@@ -39,8 +40,8 @@ class ViewController30sec: UIViewController {
     
     // called every time interval from the timer
     @objc func timerAction() {
-        if counter > 5 {
-            labelNext.text = ""
+        if counter > 6 {
+            labelNext.text = "Общее время: \(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
             counter -= 1
         } else if counter > 1 {
             labelNext.text = "приготовиться"
@@ -50,11 +51,12 @@ class ViewController30sec: UIViewController {
             counter -= 1
         } else {
             counter = 31
-            labelNext.text = ""
+            labelNext.text = "Общее время: \(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
             counter -= 1
         }
-        
+        counterOverall += 1
         labelTimer.text = "\(counter)"
+        
     }
     
     override func viewDidLoad() {
