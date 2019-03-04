@@ -39,15 +39,21 @@ class ViewController30sec: UIViewController {
     
     // called every time interval from the timer
     @objc func timerAction() {
-        if counter > 0{
-        counter -= 1
+        if counter > 5 {
+            labelNext.text = ""
+            counter -= 1
+        } else if counter > 1 {
+            labelNext.text = "приготовиться"
+            counter -= 1
+        } else if counter == 1 {
+            labelNext.text = "следующий!"
+            counter -= 1
         } else {
-            labelNext.text = "Следующий"
             counter = 31
+            labelNext.text = ""
             counter -= 1
         }
-        //FIX showing of "next" on zero
-        labelNext.text = ""
+        
         labelTimer.text = "\(counter)"
     }
     
