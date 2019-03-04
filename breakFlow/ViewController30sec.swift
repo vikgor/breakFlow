@@ -11,17 +11,26 @@ import UIKit
 class ViewController30sec: UIViewController {
 
     var counter = 30
+    var isPaused = true
     var timer = Timer()
 
-    @IBOutlet weak var label: UILabel!
-    
+    //timer show
+    @IBOutlet weak var labelTimer: UILabel!
+    //"next" label
+    @IBOutlet weak var labelNext: UILabel!
     //start timer
+    @IBOutlet weak var timerButton: UIButton!
     
     @IBAction func startTimerButtonTapped(_ sender: UIButton) {
-        timer.invalidate() // just in case this button is tapped multiple times
-        
-        // start the timer
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        if isPaused{
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            isPaused = false
+            timerButton.setTitle("pause", for: .normal)
+        } else {
+            timer.invalidate()
+            isPaused = true
+            timerButton.setTitle("resume", for: .normal)
+        }
     }
     
     @IBAction func cancelTimerButtonTapped(_ sender: UIButton) {
@@ -33,27 +42,18 @@ class ViewController30sec: UIViewController {
         if counter > 0{
         counter -= 1
         } else {
+            labelNext.text = "Следующий"
             counter = 31
             counter -= 1
         }
-        label.text = "\(counter)"
+        //FIX showing of "next" on zero
+        labelNext.text = ""
+        labelTimer.text = "\(counter)"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -22,7 +22,6 @@ class TableViewController: UITableViewController {
         
         //custom background image for the tableView and dark top bar
         tableView.backgroundView = UIImageView(image: UIImage(named: "stardust.png"))
-        navigationController?.navigationBar.barStyle = .black
         
         print("Вот набор движений на viewDidLoad:")
         print(tableMoves)
@@ -117,42 +116,12 @@ class TableViewController: UITableViewController {
         //moved storeData() from here up 5 lines with "self" in order to storeData on "confirm" instead of when plus button is pressed
     }
     
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if let destination = segue.destination as? ViewController {
-        }
-    }*/
-    
-    
     //Storing app data
     func storeData() {
         print("storeData сработала")
         defaults?.set(tableMoves, forKey: "savedData")
         defaults?.synchronize()
     }
-    
     
     //Getting app data
     func getData() -> Array<Any> {
@@ -161,7 +130,7 @@ class TableViewController: UITableViewController {
         if data != nil {
             tableMoves = data as! [String]
         } else {}
-        
+
         return tableMoves
     }
 }
