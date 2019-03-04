@@ -41,7 +41,7 @@ class ViewController30sec: UIViewController {
     // called every time interval from the timer
     @objc func timerAction() {
         if counter > 6 {
-            labelNext.text = "Общее время: \(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
+            labelNext.text = "общее время: \(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
             counter -= 1
         } else if counter > 1 {
             labelNext.text = "приготовиться"
@@ -49,8 +49,8 @@ class ViewController30sec: UIViewController {
         } else if counter == 1 {
             labelNext.text = "следующий!"
             counter -= 1
+            counter = 30
         } else {
-            counter = 31
             labelNext.text = "Общее время: \(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
             counter -= 1
         }
