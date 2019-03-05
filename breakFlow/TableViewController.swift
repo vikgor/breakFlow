@@ -19,6 +19,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getData()
+        
         //custom background image for the tableView and dark top bar
         tableView.backgroundView = UIImageView(image: UIImage(named: "stardust.png"))
         
@@ -34,6 +36,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        getData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -68,7 +71,6 @@ class TableViewController: UITableViewController {
         return true
     }
     */
-
     
     //editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -85,7 +87,6 @@ class TableViewController: UITableViewController {
         //storeData when item is deleted from the table - added that as well
         storeData()
     }
-    
     
     @IBAction func newRowPressed(_ sender: Any) {
         addTableRow()
