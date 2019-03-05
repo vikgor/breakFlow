@@ -14,7 +14,7 @@ class TableViewController: UITableViewController {
 
     @IBOutlet weak var addRowButton: UIBarButtonItem!
     
-    var tableMoves = ["ТопРок","Индиан Степ","Сальса Степ","Флор рок (мини промокашка)","Циркуль","3 степ","4 степ","Бейби лав","6 степ на локтях","6 степ олдскул","Скрэмбл","Мини-свайп","Мини-свайп через К","Зулу спин","Зулу спин через К","Зулу спин нога на коленке","Питер Пэн","Кувырок","Ножницы","Голень слайд","СС","СС на спине","СС обратный","СС с проворотом","СС с киком","Кик двумя ногами","Шафл степ","Рашн степс","Свайп нога на коленке","Вэб","Гелик","Свайп","Свайп на двух ногах","Бочка","Тартл","Джекхаммер","Бэкспин","Флаер","99","Хедспин","Бейби фриз","Бейби фриз","Чеир","Эир бейби","Бэк/полубэк","Фриз на плече","Фриз на локте","Фриз на руках","Фриз на руке","Фриз на голове"]
+    var tableMoves = ["Топ Рок","Индиан Степ","Сальса Степ","Флор рок (мини промокашка)","Циркуль","3 степ","4 степ","Бейби лав","6 степ на локтях","6 степ олдскул","Скрэмбл","Мини-свайп","Мини-свайп через К","Зулу спин","Зулу спин через К","Зулу спин нога на коленке","Питер Пэн","Кувырок","Ножницы","Голень слайд","СС","СС на спине","СС обратный","СС с проворотом","СС с киком","Кик двумя ногами","Шафл степ","Рашн степс","Свайп нога на коленке","Вэб","Гелик","Свайп","Свайп на двух ногах","Бочка","Тартл","Джекхаммер","Бэкспин","Флаер","99","Хедспин","Бейби фриз","Чеир","Эир бейби","Бэк/полубэк","Фриз на плече","Фриз на локте","Фриз на руках","Фриз на руке","Фриз на голове"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,12 +94,12 @@ class TableViewController: UITableViewController {
     
     func addTableRow() {
         //create UI alert
-        let alert = UIAlertController(title: "Add row", message: "add text for new row", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add move", message: "to the breakFlow list", preferredStyle: .alert)
         //add text field to alert
         alert.addTextField { (TextField) in
             TextField.placeholder = "Enter text here"
         }
-        alert.addAction(UIAlertAction(title: "confirm", style: .default, handler: { [weak alert] (_) in
+        alert.addAction(UIAlertAction(title: "add", style: .default, handler: { [weak alert] (_) in
             let text = alert?.textFields![0]
             self.tableMoves.append((text?.text)!)
             self.tableView.reloadData()

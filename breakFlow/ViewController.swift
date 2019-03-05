@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // call it here
+        //call it here
         //print(data!)
         //print(example.tableMoves)
     }
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         let x = Int(arc4random_uniform(2)+5)
         
         //Used to be like this:
-        //var moves = ["ТопРок","Индиан Степ","Сальса Степ","Флор рок (мини промокашка)","Циркуль","3 степ","4 степ","Бейби лав","6 степ на локтях","6 степ олдскул","Скрэмбл","Мини-свайп","Мини-свайп через К","Зулу спин","Зулу спин через К","Зулу спин нога на коленке","Питер Пэн","Кувырок","Ножницы","Голень слайд","СС","СС на спине","СС обратный","СС с проворотом","СС с киком","Кик двумя ногами","Шафл степ","Рашн степс","Свайп нога на коленке","Вэб","Гелик","Свайп","Свайп на двух ногах","Бочка","Тартл","Джекхаммер","Бэкспин","Флаер","99","Хедспин","Бейби фриз","Бейби фриз","Чеир","Эир бейби","Бэк/полубэк","Фриз на плече","Фриз на локте","Фриз на руках","Фриз на руке","Фриз на голове"]
+        //var moves = ["Toprock","Footwork", "Powermove", "Trick"]
         
         //get variable from different ViewController
         var moves = TableViewController().getData() as! [String]
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         
         
         //play a random scratch sound on button press
-        let scracthSounds = ["90sp14", "90sp18","90sp50"]
+        let scracthSounds = ["90sp14", "90sp18","90sp50", "90sp54", "100SP11", "110SP58", "110SP59", "115SP21", "115SP22", "115SP23"]
         let randomScratchIndex = Int(arc4random_uniform(UInt32(scracthSounds.count)))
         let randomScratch = scracthSounds[randomScratchIndex]
         let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: randomScratch, ofType: "wav")!)
