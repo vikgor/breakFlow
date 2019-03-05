@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1745" y="442"/>
         </scene>
-        <!--View Controller3 0sec-->
+        <!--View Controller30sec-->
         <scene sceneID="8ov-S7-jl2">
             <objects>
-                <viewController id="Fep-uP-1fV" customClass="ViewController30sec" customModule="breakFlow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Fep-uP-1fV" userLabel="View Controller30sec" customClass="ViewController30sec" customModule="breakFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Cj8-Xg-9sR"/>
                         <viewControllerLayoutGuide type="bottom" id="MA2-St-Qwq"/>
@@ -223,12 +223,12 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbp-eZ-nrA">
                                 <rect key="frame" x="16" y="64" width="343" height="554"/>
-                                <mutableString key="text">"30 секунд любви"
+                                <string key="text">"30 секунд любви"
 
 
 Участники определяют порядок и по очереди делают полуминутные выходы. 
  За 5 секунд до конца текущего выхода готовится следующий танцор. 
-Общее время выполнения, количество выходов, а также формат (например, только футворк)  определяются заранее.  </mutableString>
+Общее время выполнения, количество выходов, а также формат (например, только футворк)  определяются заранее.  </string>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

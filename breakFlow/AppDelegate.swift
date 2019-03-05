@@ -12,13 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    /*
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
-
+    */
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -40,6 +41,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    //3D Touch quick action stuff:
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(handleShortcutItem(withShortcutItem: shortcutItem))
+    }
+    
+    enum ShortcutType: String {
+        case shortcutItemType = "30sec"
+    }
+    
+    func handleShortcutItem(withShortcutItem item: UIApplicationShortcutItem) -> Bool {
+        
+        guard let shortcutType = item.type.components(separatedBy: ".").last else { return false }
+        
+        if let type = ShortcutType(rawValue: shortcutType) {
+            switch type {
+            case .shortcutItemType:
+                print("Quick action triggered!")
+                //show 3rd tab
+                if let tabBarController = self.window!.rootViewController as? UITabBarController {
+                    tabBarController.selectedIndex = 2
+                }
+                return true
+            }
+        }
+        return false
+    }
+    //3D Touch quick action ended
+    
 
 
 }
