@@ -17,7 +17,7 @@
 "addMoveTitle" = "Add move";
 "addMoveComment" = "to the breakFlow list";
 "addMovePlaceholder" = "Type move name";
-"addMoveButton" = "add";
+"addMoveButton" = "Add";
 "editMoveName" = "Edit move name";
 "editMoveNameCancel" = "Cancel";
 "editMoveNameUpdate" = "Update";
@@ -31,7 +31,7 @@
 "resume" = "resume";
 "gameRulesTitle" = "Rules";
 "back" = "Back";
-"gameRules" = "\"30 seconds of love\"\n\n\nParticipants take turns making half-minute dance routines. \n5 seconds before the end of the current round, the next dancer gets ready. \nThe total  time, the number of rounds, the order of participants, as well as the format (e.g., footwork only) are determined in advance. ";
+"gameRules" = "\"30 seconds of love\"\n\n\nParticipants take turns making half-minute dance routines. \n\n5 seconds before the end of the current round, the next dancer gets ready.\n\nThe total time, the number of rounds, the order of participants, as well as the format (e.g., footwork only) are determined in advance.";
 
 //Tab Bar
 "moves" = "Moves";

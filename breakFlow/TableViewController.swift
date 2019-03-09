@@ -146,6 +146,8 @@ class TableViewController: UITableViewController {
             print("Движение добавлено, новый набор:")
             print(self.tableMoves)
         }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("editMoveNameCancel", comment: ""), style: .cancel, handler: nil))
+
         
         //present pop up alert
         self.present(alert, animated:true, completion: nil)
