@@ -26,6 +26,8 @@
 		0578FAF322259595004CF8C1 /* 90sp14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0578FAF222259595004CF8C1 /* 90sp14.wav */; };
 		0578FAF5222596D9004CF8C1 /* 90sp18.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0578FAF4222596D9004CF8C1 /* 90sp18.wav */; };
 		0578FAF722259716004CF8C1 /* 90sp50.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0578FAF622259716004CF8C1 /* 90sp50.wav */; };
+		05A8972D22337BD100E4FAA6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 05A8972C22337BD100E4FAA6 /* README.md */; };
+		05A8972F22337E3500E4FAA6 /* screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 05A8972E22337E3500E4FAA6 /* screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		0578FAF222259595004CF8C1 /* 90sp14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 90sp14.wav; sourceTree = "<group>"; };
 		0578FAF4222596D9004CF8C1 /* 90sp18.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 90sp18.wav; sourceTree = "<group>"; };
 		0578FAF622259716004CF8C1 /* 90sp50.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 90sp50.wav; sourceTree = "<group>"; };
+		05A8972C22337BD100E4FAA6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		05A8972E22337E3500E4FAA6 /* screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 		05329B9C1EF3411900CC6547 = {
 			isa = PBXGroup;
 			children = (
+				05A8972C22337BD100E4FAA6 /* README.md */,
+				05A8972E22337E3500E4FAA6 /* screenshot.png */,
 				05329BA71EF3411A00CC6547 /* breakFlow */,
 				05329BA61EF3411A00CC6547 /* Products */,
 				0515E0A622306B71009F61E3 /* Frameworks */,
@@ -204,8 +210,10 @@
 				055836BB222E189500A0F80C /* 100SP11.wav in Resources */,
 				055836C1222E19D700A0F80C /* 115SP21.wav in Resources */,
 				055836BF222E19B200A0F80C /* 110SP58.wav in Resources */,
+				05A8972D22337BD100E4FAA6 /* README.md in Resources */,
 				05329BAE1EF3411A00CC6547 /* Main.storyboard in Resources */,
 				0578FAF322259595004CF8C1 /* 90sp14.wav in Resources */,
+				05A8972F22337E3500E4FAA6 /* screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
