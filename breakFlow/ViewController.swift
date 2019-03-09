@@ -24,6 +24,10 @@ class ViewController: UIViewController {
         //call it here
         //print(data!)
         //print(example.tableMoves)
+        
+        //Localization
+        randomizeButton.setTitle(NSLocalizedString("newFlow", comment: ""),for: .normal)
+        randomNumberLabel.text = NSLocalizedString("breakFlow", comment: "")
     }
     
     override func didReceiveMemoryWarning() {

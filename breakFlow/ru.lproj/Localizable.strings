@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  breakFlow
+
+  Created by Viktor Gordienko on 3/9/19.
+  Copyright © 2019 Viktor Gordienko. All rights reserved.
+*/
+
+//ViewController
+"newFlow" = "новая";
+"breakFlow" = "Нажмите на кнопку чтобы получить новую связку движений";
+
+//TableViewController
+"tableMovesTitle" = "Элементы";
+"tableMovesTitleEdit" = "Изменить";
+"tableMovesTitleDelete" = "Удалить";
+"addMoveTitle" = "Добавить элемент";
+"addMoveComment" = "в список breakFlow";
+"addMovePlaceholder" = "Впишите название";
+"addMoveButton" = "добавить";
+"editMoveName" = "Изменить название";
+"editMoveNameCancel" = "Отмена";
+"editMoveNameUpdate" = "Обновить";
+
+//ViewController30sec
+"getReady" = "приготовиться";
+"next" = "следующий!";
+"overallTime" = "общее время: ";
+"startTimer" = "старт";
+"pause" = "пауза";
+"resume" = "продолжить";
+"gameRulesTitle" = "Правила";
+"back" = "Назад";
+"gameRules" = "\"30 секунд любви\"\n\n\nУчастники определяют порядок и по очереди делают полуминутные выходы. \n За 5 секунд до конца текущего выхода готовится следующий танцор. \nОбщее время выполнения, количество выходов, а также формат (например, только футворк)  определяются заранее.  ";
+
+//Tab Bar
+"moves" = "Элементы";
+"30sec" = "30 сек";

@@ -24,7 +24,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stardust" translatesAutoresizingMaskIntoConstraints="NO" id="NGJ-00-sWV">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажми на кнопку чтобы получить новую связь" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEB-hA-gu5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button to get a new list of moves" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEB-hA-gu5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="502"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
@@ -38,7 +38,7 @@
                                     <constraint firstAttribute="height" constant="80" id="Eqz-zW-pNc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
-                                <state key="normal" title="кнопка"/>
+                                <state key="normal" title="new flow"/>
                                 <connections>
                                     <action selector="randomizeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wEc-GV-bi1"/>
                                 </connections>
@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="1744.8" y="-229.83508245877064"/>
         </scene>
-        <!--Settings-->
+        <!--Moves-->
         <scene sceneID="W9m-5M-N8b">
             <objects>
                 <tableViewController id="e1y-xR-RPT" customClass="TableViewController" customModule="breakFlow" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                             <outlet property="delegate" destination="e1y-xR-RPT" id="CgG-BZ-ykP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Settings" id="m2S-Ei-gNC">
+                    <navigationItem key="navigationItem" title="Moves" id="m2S-Ei-gNC">
                         <barButtonItem key="leftBarButtonItem" systemItem="add" id="15A-6e-HNN">
                             <connections>
                                 <action selector="newRowPressed:" destination="e1y-xR-RPT" id="Qj8-Tj-72X"/>
@@ -197,6 +197,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="gameRulesButton" destination="2DP-8E-NQu" id="mS6-2g-zS7"/>
                         <outlet property="labelNext" destination="bFm-5g-jAY" id="D1t-Mg-Xn5"/>
                         <outlet property="labelTimer" destination="U6I-YB-IHg" id="uzv-t2-jTj"/>
                         <outlet property="timerButton" destination="qIK-r7-emt" id="8wE-Yy-8qP"/>
@@ -209,7 +210,7 @@
         <!--Правила-->
         <scene sceneID="7NT-ya-70w">
             <objects>
-                <viewController title="Правила" id="bJK-s5-cOm" sceneMemberID="viewController">
+                <viewController title="Правила" id="bJK-s5-cOm" customClass="ViewControllerGameRules" customModule="breakFlow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DdE-FZ-lsL"/>
                         <viewControllerLayoutGuide type="bottom" id="kIx-BN-fjv"/>
@@ -246,6 +247,9 @@
                             <constraint firstItem="9hj-SF-9LA" firstAttribute="top" secondItem="ppn-KS-JTn" secondAttribute="top" id="pKO-2I-GpL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameRules" destination="dbp-eZ-nrA" id="Xs9-NW-GWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNW-G2-lxk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

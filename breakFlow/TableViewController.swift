@@ -14,7 +14,9 @@ class TableViewController: UITableViewController {
 
     @IBOutlet weak var addRowButton: UIBarButtonItem!
     
-    var tableMoves = ["Топ Рок","Индиан Степ","Сальса Степ","Флор рок (мини промокашка)","Циркуль","3 степ","4 степ","Бейби лав","6 степ на локтях","6 степ олдскул","Скрэмбл","Мини-свайп","Мини-свайп через К","Зулу спин","Зулу спин через К","Зулу спин нога на коленке","Питер Пэн","Кувырок","Ножницы","Голень слайд","СС","СС на спине","СС обратный","СС с проворотом","СС с киком","Кик двумя ногами","Шафл степ","Рашн степс","Свайп нога на коленке","Вэб","Гелик","Свайп","Свайп на двух ногах","Бочка","Тартл","Джекхаммер","Бэкспин","Флаер","99","Хедспин","Бейби фриз","Чеир","Эир бейби","Бэк/полубэк","Фриз на плече","Фриз на локте","Фриз на руках","Фриз на руке","Фриз на голове"]
+    //var tableMoves = ["Топ Рок","Индиан Степ","Сальса Степ","Флор рок (мини промокашка)","Циркуль","3 степ","4 степ","Бейби лав","6 степ на локтях","6 степ олдскул","Скрэмбл","Мини-свайп","Мини-свайп через К","Зулу спин","Зулу спин через К","Зулу спин нога на коленке","Питер Пэн","Кувырок","Ножницы","Голень слайд","СС","СС на спине","СС обратный","СС с проворотом","СС с киком","Кик двумя ногами","Шафл степ","Рашн степс","Свайп нога на коленке","Вэб","Гелик","Свайп","Свайп на двух ногах","Бочка","Тартл","Джекхаммер","Бэкспин","Флаер","99","Хедспин","Бейби фриз","Чеир","Эир бейби","Бэк/полубэк","Фриз на плече","Фриз на локте","Фриз на руках","Фриз на руке","Фриз на голове"]
+    
+    var tableMoves = ["top rock", "6 step", "4 step", "3 step", "CC", "baby love", "zulu spin", "windmill", "swipe", "turtle", "backspin", "baby freeze", "chair", "air baby"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,7 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        navigationItem.title = NSLocalizedString("tableMovesTitle", comment: "")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +57,7 @@ class TableViewController: UITableViewController {
         return tableMoves.count
     }
 
+    //fill the table with array items
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "moves", for: indexPath)
         cell.textLabel?.text = tableMoves[indexPath.row]
@@ -63,17 +67,18 @@ class TableViewController: UITableViewController {
         tableView.separatorColor = UIColor(red: 0.68, green: 0.67, blue: 0.73, alpha: 0)
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    //rearrange cells by drag & move
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedObjTemp = tableMoves[sourceIndexPath.item]
+        tableMoves.remove(at: sourceIndexPath.item)
+        tableMoves.insert(movedObjTemp, at: destinationIndexPath.item)
+        
+        storeData()
     }
-    */
     
     //editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    /*override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             tableMoves.remove(at: indexPath.row)
@@ -87,6 +92,40 @@ class TableViewController: UITableViewController {
         //storeData when item is deleted from the table - added that as well
         storeData()
     }
+ */
+    
+    //make it possible to edit the table items
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    //editing the table view (also editing single cells)
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editAction = UITableViewRowAction(style: .normal, title: NSLocalizedString("tableMovesTitleEdit", comment: ""), handler: { (action, indexPath) in
+            let alert = UIAlertController(title: "", message: NSLocalizedString("editMoveName", comment: ""), preferredStyle: .alert)
+            alert.addTextField(configurationHandler: { (textField) in
+                textField.text = self.tableMoves[indexPath.row]
+            })
+            alert.addAction(UIAlertAction(title: NSLocalizedString("editMoveNameUpdate", comment: ""), style: .default, handler: { (updateAction) in
+                self.tableMoves[indexPath.row] = alert.textFields!.first!.text!
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
+                
+                self.storeData()
+            }))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("editMoveNameCancel", comment: ""), style: .cancel, handler: nil))
+            self.present(alert, animated: false)
+        })
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: NSLocalizedString("tableMovesTitleDelete", comment: ""), handler: { (action, indexPath) in
+            self.tableMoves.remove(at: indexPath.row)
+            tableView.reloadData()
+        })
+        
+        storeData()
+        
+        return [deleteAction, editAction]
+        
+    }
     
     @IBAction func newRowPressed(_ sender: Any) {
         addTableRow()
@@ -94,12 +133,12 @@ class TableViewController: UITableViewController {
     
     func addTableRow() {
         //create UI alert
-        let alert = UIAlertController(title: "Add move", message: "to the breakFlow list", preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("addMoveTitle", comment: ""), message: NSLocalizedString("addMoveComment", comment: ""), preferredStyle: .alert)
         //add text field to alert
         alert.addTextField { (TextField) in
-            TextField.placeholder = "Enter text here"
+            TextField.placeholder = NSLocalizedString("addMovePlaceholder", comment: "")
         }
-        alert.addAction(UIAlertAction(title: "add", style: .default, handler: { [weak alert] (_) in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("addMoveButton", comment: ""), style: .default, handler: { [weak alert] (_) in
             let text = alert?.textFields![0]
             self.tableMoves.append((text?.text)!)
             self.tableView.reloadData()

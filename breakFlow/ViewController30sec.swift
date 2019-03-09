@@ -22,15 +22,19 @@ class ViewController30sec: UIViewController {
     //start timer
     @IBOutlet weak var timerButton: UIButton!
     
+    //30 seconds of love rules button
+    @IBOutlet weak var gameRulesButton: UIBarButtonItem!
+    
+    
     @IBAction func startTimerButtonTapped(_ sender: UIButton) {
         if isPaused{
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             isPaused = false
-            timerButton.setTitle("pause", for: .normal)
+            timerButton.setTitle(NSLocalizedString("pause", comment: ""), for: .normal)
         } else {
             timer.invalidate()
             isPaused = true
-            timerButton.setTitle("resume", for: .normal)
+            timerButton.setTitle(NSLocalizedString("resume", comment: ""), for: .normal)
         }
     }
     
@@ -41,17 +45,17 @@ class ViewController30sec: UIViewController {
     // called every time interval from the timer
     @objc func timerAction() {
         if counter > 6 {
-            labelNext.text = "общее время: \(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
+            labelNext.text = "\(NSLocalizedString("overallTime", comment: ""))\(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
             counter -= 1
         } else if counter > 1 {
-            labelNext.text = "приготовиться"
+            labelNext.text = NSLocalizedString("getReady", comment: "")
             counter -= 1
         } else if counter == 1 {
-            labelNext.text = "следующий!"
+            labelNext.text = NSLocalizedString("next", comment: "")
             counter -= 1
             counter = 30
         } else {
-            labelNext.text = "Общее время: \(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
+            labelNext.text = "\(NSLocalizedString("overallTime", comment: ""))\(String(format: "%02d", counterOverall/60)):\(String(format: "%02d", counterOverall%60))"
             counter -= 1
         }
         counterOverall += 1
@@ -62,6 +66,12 @@ class ViewController30sec: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        labelNext.text = NSLocalizedString("getReady", comment: "")
+        timerButton.setTitle(NSLocalizedString("startTimer", comment: ""),for: .normal)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: NSLocalizedString("back", comment: ""), style: .plain, target: nil, action: nil)
+        
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("gameRulesTitle", comment: ""), style: .plain, target: nil, action: #selector())
+        
+        gameRulesButton.title = NSLocalizedString("gameRulesTitle", comment: "")
     }
-
 }
