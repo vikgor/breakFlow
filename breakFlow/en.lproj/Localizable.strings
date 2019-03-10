@@ -23,6 +23,7 @@
 "editMoveNameUpdate" = "Update";
 
 //ViewController30sec
+"30secTitle" = "30 seconds of love";
 "getReady" = "get ready";
 "next" = "next!";
 "overallTime" = "overall time: ";

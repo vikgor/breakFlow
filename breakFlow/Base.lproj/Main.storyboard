@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button to get a new list of moves" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEB-hA-gu5">
-                                <rect key="frame" x="0.0" y="20" width="375" height="502"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="458"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,7 +59,7 @@
                             <constraint firstItem="NGJ-00-sWV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vgM-5X-srj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="breakFlow" image="random" id="4tb-dq-rpV"/>
+                    <navigationItem key="navigationItem" title="breakFlow" id="vTl-GR-TAz"/>
                     <connections>
                         <outlet property="randomNumberLabel" destination="AEB-hA-gu5" id="jKG-oM-kcr"/>
                         <outlet property="randomizeButton" destination="pQs-HO-usf" id="gdb-41-DMS"/>
@@ -67,7 +67,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1744.8" y="-229.83508245877064"/>
+            <point key="canvasLocation" x="2521" y="-246"/>
+        </scene>
+        <!--breakFlow-->
+        <scene sceneID="K7J-qj-Lke">
+            <objects>
+                <navigationController id="E94-0w-UPm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="breakFlow" image="random" id="han-iw-Yig"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="J2h-KN-AAn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="shX-VF-Ztm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xl-GY-9jl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="-246"/>
         </scene>
         <!--Moves-->
         <scene sceneID="W9m-5M-N8b">
@@ -188,9 +205,8 @@
                             <constraint firstItem="MA2-St-Qwq" firstAttribute="top" secondItem="qIK-r7-emt" secondAttribute="bottom" constant="8" symbolic="YES" id="qUw-EV-iQ6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="acd-Og-HMT">
+                    <navigationItem key="navigationItem" title="30 seconds of love" id="acd-Og-HMT">
                         <barButtonItem key="rightBarButtonItem" title="Правила" id="2DP-8E-NQu">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="bJK-s5-cOm" kind="show" id="Cms-9S-Met"/>
                             </connections>
@@ -266,7 +282,7 @@
                         <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Lop-tl-jZo"/>
+                        <segue destination="E94-0w-UPm" kind="relationship" relationship="viewControllers" id="zHp-FC-hLQ"/>
                         <segue destination="Zfn-j8-1Pp" kind="relationship" relationship="viewControllers" id="p8j-aB-Db8"/>
                         <segue destination="5oC-6V-IY2" kind="relationship" relationship="viewControllers" id="M4P-hO-6wt"/>
                     </connections>

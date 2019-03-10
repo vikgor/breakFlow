@@ -73,5 +73,7 @@ class ViewController30sec: UIViewController {
         //navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("gameRulesTitle", comment: ""), style: .plain, target: nil, action: #selector())
         
         gameRulesButton.title = NSLocalizedString("gameRulesTitle", comment: "")
+        navigationItem.title = NSLocalizedString("30secTitle", comment: "")
+
     }
 }
