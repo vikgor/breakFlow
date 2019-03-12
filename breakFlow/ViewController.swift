@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //call it here
         //print(data!)
         //print(example.tableMoves)
         
@@ -67,7 +66,8 @@ class ViewController: UIViewController {
         let randomScratch = scracthSounds[randomScratchIndex]
         let alertSound = URL(fileURLWithPath: Bundle.main.path(forResource: randomScratch, ofType: "wav")!)
         print(alertSound)
-        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        //that stopped working after updating swift from 4 to 4.2:
+        //try! AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         try! AVAudioSession.sharedInstance().setActive(true)
         try! audioPlayer = AVAudioPlayer(contentsOf: alertSound)
         audioPlayer.prepareToPlay()
