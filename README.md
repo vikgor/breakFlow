@@ -1,5 +1,5 @@
 # breakFlow
-breakFlow - simple iOS dance routine randomizer written in Swift 5.
+breakFlow - simple iOS breakdance routine randomizer written in Swift 5.
 
 A demo version is available on the [web](https://vivalaresistance.ru/breakflow/). 
 
