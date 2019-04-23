@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="caP-AV-R16">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="caP-AV-R16">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -312,9 +312,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" width="40" height="40"/>
-        <image name="random" width="40" height="40"/>
-        <image name="stardust" width="798" height="798"/>
-        <image name="stopwatch" width="37.5" height="37.5"/>
+        <image name="pencil" width="25" height="25"/>
+        <image name="random" width="25" height="25"/>
+        <image name="stardust" width="399" height="399"/>
+        <image name="stopwatch" width="25" height="25"/>
     </resources>
 </document>
