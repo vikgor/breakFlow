@@ -16,12 +16,12 @@ class TableViewController: UITableViewController {
     
     //var tableMoves = ["Топ Рок","Индиан Степ","Сальса Степ","Флор рок (мини промокашка)","Циркуль","3 степ","4 степ","Бейби лав","6 степ на локтях","6 степ олдскул","Скрэмбл","Мини-свайп","Мини-свайп через К","Зулу спин","Зулу спин через К","Зулу спин нога на коленке","Питер Пэн","Кувырок","Ножницы","Голень слайд","СС","СС на спине","СС обратный","СС с проворотом","СС с киком","Кик двумя ногами","Шафл степ","Рашн степс","Свайп нога на коленке","Вэб","Гелик","Свайп","Свайп на двух ногах","Бочка","Тартл","Джекхаммер","Бэкспин","Флаер","99","Хедспин","Бейби фриз","Чеир","Эир бейби","Бэк/полубэк","Фриз на плече","Фриз на локте","Фриз на руках","Фриз на руке","Фриз на голове"]
     
-    var tableMoves = ["top rock", "6 step", "4 step", "3 step", "CC", "baby love", "zulu spin", "windmill", "swipe", "turtle", "backspin", "baby freeze", "chair", "air baby"]
+    var tableMoves = ["top rock", "indian step", "shuffle step", "6 step", "4 step", "3 step", "baby swipe", "CC", "baby love", "zulu spin", "backspin", "windmill", "swipe", "turtle", "munchmill", "baby freeze", "chair", "air baby", "handstand"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getData()
+        _ = getData()
         
         //custom background image for the tableView and dark top bar
         tableView.backgroundView = UIImageView(image: UIImage(named: "stardust.png"))
@@ -39,7 +39,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        getData()
+        _ = getData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
