@@ -69,9 +69,14 @@ class ViewController: UIViewController {
         //that stopped working after updating swift from 4 to 4.2:
         //try! AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         try! AVAudioSession.sharedInstance().setActive(true)
-        try! audioPlayer = AVAudioPlayer(contentsOf: alertSound)
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
+        
+        
+        
+//        Sound doesn't work for some reason
+        
+//        try! audioPlayer = AVAudioPlayer(contentsOf: alertSound)
+//        audioPlayer.prepareToPlay()
+//        audioPlayer.play()
         
         
     }
