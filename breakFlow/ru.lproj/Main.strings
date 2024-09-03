@@ -1,36 +1,0 @@
-
-/* Class = "UIBarButtonItem"; title = "Правила"; ObjectID = "2DP-8E-NQu"; */
-"2DP-8E-NQu.title" = "Правила";
-
-/* Class = "UITabBarItem"; title = "breakFlow"; ObjectID = "4tb-dq-rpV"; */
-"4tb-dq-rpV.title" = "breakFlow";
-
-/* Class = "UILabel"; text = "Press the button to get a new list of moves"; ObjectID = "AEB-hA-gu5"; */
-"AEB-hA-gu5.text" = "Press the button to get a new list of moves";
-
-/* Class = "UILabel"; text = "30"; ObjectID = "U6I-YB-IHg"; */
-"U6I-YB-IHg.text" = "30";
-
-/* Class = "UITabBarItem"; title = "moves"; ObjectID = "aCK-gU-tTG"; */
-"aCK-gU-tTG.title" = "moves";
-
-/* Class = "UILabel"; text = "приготовиться"; ObjectID = "bFm-5g-jAY"; */
-"bFm-5g-jAY.text" = "приготовиться";
-
-/* Class = "UIViewController"; title = "Правила"; ObjectID = "bJK-s5-cOm"; */
-"bJK-s5-cOm.title" = "Правила";
-
-/* Class = "UILabel"; text = "\"30 секунд любви\"\n\n\nУчастники определяют порядок и по очереди делают полуминутные выходы. \n За 5 секунд до конца текущего выхода готовится следующий танцор. \nОбщее время выполнения, количество выходов, а также формат (например, только футворк)  определяются заранее.  "; ObjectID = "dbp-eZ-nrA"; */
-"dbp-eZ-nrA.text" = "\"30 секунд любви\"\n\n\nУчастники определяют порядок и по очереди делают полуминутные выходы. \n За 5 секунд до конца текущего выхода готовится следующий танцор. \nОбщее время выполнения, количество выходов, а также формат (например, только футворк)  определяются заранее.  ";
-
-/* Class = "UINavigationItem"; title = "Moves"; ObjectID = "m2S-Ei-gNC"; */
-"m2S-Ei-gNC.title" = "Moves";
-
-/* Class = "UIButton"; normalTitle = "new flow"; ObjectID = "pQs-HO-usf"; */
-"pQs-HO-usf.normalTitle" = "new flow";
-
-/* Class = "UIButton"; normalTitle = "старт"; ObjectID = "qIK-r7-emt"; */
-"qIK-r7-emt.normalTitle" = "старт";
-
-/* Class = "UITabBarItem"; title = "30 sec"; ObjectID = "yA0-jq-cJB"; */
-"yA0-jq-cJB.title" = "30 sec";
