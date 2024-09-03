@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		92459B322C8762B400305798 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 92459B312C8762B300305798 /* Config.xcconfig */; };
 		92459B342C87636700305798 /* Version.sh in Resources */ = {isa = PBXBuildFile; fileRef = 92459B332C87636700305798 /* Version.sh */; };
+		92459B372C8764AF00305798 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B362C8764AF00305798 /* Move.swift */; };
+		92459B392C8764B600305798 /* MovesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B382C8764B600305798 /* MovesViewModel.swift */; };
+		92459B3B2C8764BB00305798 /* MoveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B3A2C8764BB00305798 /* MoveType.swift */; };
+		92459B3E2C8764F300305798 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B3D2C8764F300305798 /* TimerView.swift */; };
+		92459B402C87658900305798 /* FlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B3F2C87658900305798 /* FlowView.swift */; };
+		92459B422C87659A00305798 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B412C87659A00305798 /* ConfigurationView.swift */; };
+		92459B442C8765C000305798 /* MovesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B432C8765C000305798 /* MovesListView.swift */; };
+		92459B462C8765DD00305798 /* AddMoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B452C8765DD00305798 /* AddMoveView.swift */; };
+		92459B482C8765FA00305798 /* MoveDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92459B472C8765FA00305798 /* MoveDetailView.swift */; };
 		927D28EC2C836C99004049DE /* breakFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927D28EB2C836C99004049DE /* breakFlowApp.swift */; };
 		927D28EE2C836C99004049DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927D28ED2C836C99004049DE /* ContentView.swift */; };
 		927D28F02C836C9A004049DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 927D28EF2C836C9A004049DE /* Assets.xcassets */; };
@@ -31,6 +40,15 @@
 /* Begin PBXFileReference section */
 		92459B312C8762B300305798 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		92459B332C87636700305798 /* Version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Version.sh; sourceTree = "<group>"; };
+		92459B362C8764AF00305798 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		92459B382C8764B600305798 /* MovesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesViewModel.swift; sourceTree = "<group>"; };
+		92459B3A2C8764BB00305798 /* MoveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveType.swift; sourceTree = "<group>"; };
+		92459B3D2C8764F300305798 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		92459B3F2C87658900305798 /* FlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowView.swift; sourceTree = "<group>"; };
+		92459B412C87659A00305798 /* ConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
+		92459B432C8765C000305798 /* MovesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovesListView.swift; sourceTree = "<group>"; };
+		92459B452C8765DD00305798 /* AddMoveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoveView.swift; sourceTree = "<group>"; };
+		92459B472C8765FA00305798 /* MoveDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDetailView.swift; sourceTree = "<group>"; };
 		927D28E82C836C99004049DE /* breakFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		927D28EB2C836C99004049DE /* breakFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breakFlowApp.swift; sourceTree = "<group>"; };
 		927D28ED2C836C99004049DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +68,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92459B352C8764A900305798 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92459B362C8764AF00305798 /* Move.swift */,
+				92459B382C8764B600305798 /* MovesViewModel.swift */,
+				92459B3A2C8764BB00305798 /* MoveType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92459B492C87664C00305798 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				927D28ED2C836C99004049DE /* ContentView.swift */,
+				92459B3F2C87658900305798 /* FlowView.swift */,
+				92459B412C87659A00305798 /* ConfigurationView.swift */,
+				92459B432C8765C000305798 /* MovesListView.swift */,
+				92459B452C8765DD00305798 /* AddMoveView.swift */,
+				92459B472C8765FA00305798 /* MoveDetailView.swift */,
+				92459B3D2C8764F300305798 /* TimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		927D28DF2C836C99004049DE = {
 			isa = PBXGroup;
 			children = (
@@ -70,7 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				927D28EB2C836C99004049DE /* breakFlowApp.swift */,
-				927D28ED2C836C99004049DE /* ContentView.swift */,
+				92459B492C87664C00305798 /* Views */,
+				92459B352C8764A900305798 /* Models */,
 				927D28EF2C836C9A004049DE /* Assets.xcassets */,
 				927D28F12C836C9A004049DE /* breakFlow.entitlements */,
 				927D28F22C836C9A004049DE /* Preview Content */,
@@ -161,7 +204,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92459B3E2C8764F300305798 /* TimerView.swift in Sources */,
+				92459B462C8765DD00305798 /* AddMoveView.swift in Sources */,
+				92459B442C8765C000305798 /* MovesListView.swift in Sources */,
+				92459B402C87658900305798 /* FlowView.swift in Sources */,
 				927D28EE2C836C99004049DE /* ContentView.swift in Sources */,
+				92459B482C8765FA00305798 /* MoveDetailView.swift in Sources */,
+				92459B392C8764B600305798 /* MovesViewModel.swift in Sources */,
+				92459B3B2C8764BB00305798 /* MoveType.swift in Sources */,
+				92459B422C87659A00305798 /* ConfigurationView.swift in Sources */,
+				92459B372C8764AF00305798 /* Move.swift in Sources */,
 				927D28EC2C836C99004049DE /* breakFlowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
