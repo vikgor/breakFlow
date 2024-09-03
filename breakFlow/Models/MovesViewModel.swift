@@ -61,6 +61,8 @@ class MovesViewModel: NSObject, ObservableObject {
             session.delegate = self
             session.activate()
         }
+
+        sendMovesToWatch()
     }
     
     // MARK: - Helpers
