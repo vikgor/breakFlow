@@ -24,44 +24,41 @@ struct TimerView: View {
     private let maxTime = 1200  // 20 minutes in seconds
     
     var body: some View {
-        NavigationView {
-            VStack {
-                
-                Spacer()
-                
-                Text(labelTimer)
-                    .font(.largeTitle)
-                    .padding()
-                
-                Text(labelNext)
-                    .font(.headline)
-                    .padding()
-                
-                Spacer()
-                
-                Button(isPaused ? "Start" : "Pause") {
-                    if isPaused {
-                        startTimer()
-                    } else {
-                        pauseTimer()
-                    }
-                }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
+        VStack {
+            Spacer()
+            
+            Text(labelTimer)
+                .font(.largeTitle)
                 .padding()
-            }
-            .navigationTitle("30 seconds of love")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Rules") {
-                        showingRules = true
-                    }
+            
+            Text(labelNext)
+                .font(.headline)
+                .padding()
+            
+            Spacer()
+            
+            Button(isPaused ? "Start" : "Pause") {
+                if isPaused {
+                    startTimer()
+                } else {
+                    pauseTimer()
                 }
             }
-            .sheet(isPresented: $showingRules) {
-                NavigationView {
-                    RulesView()
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+            .padding()
+        }
+        .navigationTitle("30 seconds of love")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Rules") {
+                    showingRules = true
                 }
+            }
+        }
+        .sheet(isPresented: $showingRules) {
+            NavigationView {
+                RulesView()
             }
         }
     }
